@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>User Table</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     table {
       border-collapse: collapse;
@@ -14,22 +15,40 @@
   </style>
 </head>
 <body>
-    <input type="text" id="searchInput" placeholder="Search...">
+    <div class="container">
+        <div class="table-container">
+          <form id="addUserForm" style="display: none;">
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="text" id="usernameInput" placeholder="Username">
+            <input type="text" id="emailInput" placeholder="Email">
+            <!-- <input type="text" id="addressInput" placeholder="Address"> -->
+            <input type="text" id="phoneInput" placeholder="Phone">
+            <input type="text" id="websiteInput" placeholder="Website">
+            <input type="text" id="companyInput" placeholder="Company">
+            <button type="submit">Add User</button>
+          </form>
 
-  <table id="userTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>Website</th>
-        <th>Company</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="addUserBtn">Add User</button>
+    </div>
+
+      <table id="userTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <!-- <th>Address</th> -->
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
   <script src="app.js"></script>
 </body>
