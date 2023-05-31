@@ -29,9 +29,9 @@ function createTableBody(users) {
     websiteCell.textContent = user.website;
     row.appendChild(websiteCell);
 
-    var companyCell = document.createElement("td");
-    companyCell.textContent = user.company;
-    row.appendChild(companyCell);
+    // var companyCell = document.createElement("td");
+    // companyCell.textContent = user.company;
+    // row.appendChild(companyCell);
 
     var editCell = document.createElement("td");
     var editButton = document.createElement("button");
@@ -94,7 +94,7 @@ function addUser(event) {
   var emailInput = document.querySelector("#emailInput");
   var phoneInput = document.querySelector("#phoneInput");
   var websiteInput = document.querySelector("#websiteInput");
-  var companyInput = document.querySelector("#companyInput");
+//   var companyInput = document.querySelector("#companyInput");
 
   var newUser = {
     name: nameInput.value,
@@ -102,7 +102,7 @@ function addUser(event) {
     email: emailInput.value,
     phone: phoneInput.value,
     website: websiteInput.value,
-    company: companyInput.value
+    // company: companyInput.value
   };
 
   users.push(newUser);
@@ -113,7 +113,7 @@ function addUser(event) {
   emailInput.value = "";
   phoneInput.value = "";
   websiteInput.value = "";
-  companyInput.value = "";
+//   companyInput.value = "";
 
   hideAddUserForm();
 }
@@ -126,7 +126,7 @@ function createEditHandler(index) {
     var emailCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 2];
     var phoneCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 3];
     var websiteCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 4];
-    var companyCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 5];
+    // var companyCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 5];
 
     var nameInput = document.createElement("input");
     nameInput.type = "text";
@@ -148,9 +148,9 @@ function createEditHandler(index) {
     websiteInput.type = "text";
     websiteInput.value = websiteCell.textContent;
 
-    var companyInput = document.createElement("input");
-    companyInput.type = "text";
-    companyInput.value = companyCell.textContent;
+    // var companyInput = document.createElement("input");
+    // companyInput.type = "text";
+    // companyInput.value = companyCell.textContent;
 
     nameCell.textContent = "";
     nameCell.appendChild(nameInput);
@@ -167,8 +167,8 @@ function createEditHandler(index) {
     websiteCell.textContent = "";
     websiteCell.appendChild(websiteInput);
 
-    companyCell.textContent = "";
-    companyCell.appendChild(companyInput);
+    // companyCell.textContent = "";
+    // companyCell.appendChild(companyInput);
 
     var editButton = document.querySelectorAll("#userTable tbody tr td button")[index];
     editButton.textContent = "Save";
@@ -185,14 +185,14 @@ function createSaveHandler(index) {
     var emailCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 2];
     var phoneCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 3];
     var websiteCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 4];
-    var companyCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 5];
+    // var companyCell = document.querySelectorAll("#userTable tbody tr td")[index * 7 + 5];
 
     var nameInput = nameCell.querySelector("input");
     var usernameInput = usernameCell.querySelector("input");
     var emailInput = emailCell.querySelector("input");
     var phoneInput = phoneCell.querySelector("input");
     var websiteInput = websiteCell.querySelector("input");
-    var companyInput = companyCell.querySelector("input");
+    // var companyInput = companyCell.querySelector("input");
 
     var editedUser = {
       name: nameInput.value,
@@ -200,7 +200,7 @@ function createSaveHandler(index) {
       email: emailInput.value,
       phone: phoneInput.value,
       website: websiteInput.value,
-      company: companyInput.value
+    //   company: companyInput.value
     };
 
     users[index] = editedUser;
